@@ -21,13 +21,11 @@ transporter.verify((error, success) => {
 });
 
 router.post('/send', (req, res, next) => {
-  var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
-  var content = `name: ${name} \n email: ${email} \n message: ${message} `;
+  var content = `email: ${email} \n message: ${message} `;
 
   var mail = {
-    from: name,
     to: 'rfurry@gmail.com',
     subject: 'New message from rafadev.com',
     text: content
