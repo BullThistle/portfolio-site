@@ -8,22 +8,24 @@ import Contact from './components/Contact';
 import './App.css';
 
 const App = () => (
-  <Container className="site-container" style={{ width: '80%' }}>
-    <BrowserRouter>
-      <Grid>
-        <Grid.Column width={4}>
-          <SiteHeader />
-        </Grid.Column>
-        <Grid.Column width={11}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-        </Grid.Column>
-      </Grid>
-    </BrowserRouter>
-  </Container>
+  <div className="site-container">
+    <Container>
+      <BrowserRouter>
+        <Grid>
+          <Grid.Column width={4}>
+            <SiteHeader />
+          </Grid.Column>
+          <Grid.Column width={11}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+          </Grid.Column>
+        </Grid>
+      </BrowserRouter>
+    </Container>
+  </div>
 );
 
 export default App;

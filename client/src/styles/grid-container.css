@@ -1,0 +1,9 @@
+.grid-container {
+  margin-top: 89px;
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    margin-top: 118px;
+  }
+}

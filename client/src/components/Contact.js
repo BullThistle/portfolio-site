@@ -11,7 +11,7 @@ import {
   Icon,
   Message,
 } from 'semantic-ui-react';
-import './Contact.css';
+import '../styles/grid-container.css';
 
 class Contact extends React.Component {
   constructor() {
@@ -100,32 +100,33 @@ class Contact extends React.Component {
     return (
       <Container>
         <Header style={{ paddingTop: '5px' }}>Contact</Header>
-        <Grid style={{ marginTop: '75px' }}>
-          <Grid.Row>
-            <Form
-              id="contact-form"
-              onSubmit={this.handleSubmit}
-              method="POST"
-              style={{ width: '100%' }}
-            >
-              <Grid.Column width={16}>
-                <Input id="email" fluid placeholder="Your Email" />
-              </Grid.Column>
-              <Grid.Column width={16}>
-                <TextArea
-                  id="message"
-                  autoHeight
-                  placeholder="Message"
-                  style={{ marginTop: '10px' }}
-                />
-              </Grid.Column>
-              <Grid.Column width={16}>
-                {this.message()}
-                {this.button()}
-              </Grid.Column>
-            </Form>
-          </Grid.Row>
-        </Grid>
+        <div className="grid-container">
+          <Grid>
+            <Grid.Row>
+              <Form
+                id="contact-form"
+                onSubmit={this.handleSubmit}
+                method="POST"
+                style={{ width: '100%' }}
+              >
+                <Grid.Column width={16}>
+                  <Input id="email" fluid placeholder="Your Email" />
+                </Grid.Column>
+                <Grid.Column width={16}>
+                  <TextArea
+                    id="message"
+                    placeholder="Message"
+                    style={{ marginTop: '10px', minHeight: '80px' }}
+                  />
+                </Grid.Column>
+                <Grid.Column width={16}>
+                  {this.message()}
+                  {this.button()}
+                </Grid.Column>
+              </Form>
+            </Grid.Row>
+          </Grid>
+        </div>
       </Container>
     );
   }
