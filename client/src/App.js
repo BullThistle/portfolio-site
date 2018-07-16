@@ -15,7 +15,7 @@ const App = () => (
           <Grid.Column width={4}>
             <SiteHeader />
           </Grid.Column>
-          <Grid.Column width={11}>
+          <Grid.Column mobile={6} tablet={11} computer={11}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/portfolio" component={Portfolio} />
