@@ -12,6 +12,7 @@ import {
   Message,
 } from 'semantic-ui-react';
 import '../styles/grid-container.css';
+import '../styles/Contact.css';
 
 class Contact extends React.Component {
   constructor() {
@@ -81,13 +82,15 @@ class Contact extends React.Component {
   message() {
     if (this.state.emailSuccess === true) {
       return (
-        <Message
-          positive
-          onDismiss={this.handleDismiss}
-          style={{ float: 'left', marginTop: '10px', width: '300px' }}
-          header="Email successfully sent!"
-          content="I'll be sure to get back to you with haste."
-        />
+        <div className="message-container">
+          <Message
+            positive
+            onDismiss={this.handleDismiss}
+            style={{ float: 'left', marginTop: '10px' }}
+            header="Email successfully sent!"
+            content="I'll be sure to get back to you with haste."
+          />
+        </div>
       );
     }
   }

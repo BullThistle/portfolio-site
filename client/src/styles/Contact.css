@@ -1,0 +1,11 @@
+@media (max-width: 700px) {
+  .message-container {
+    width: 240px;
+  }
+}
+
+@media (max-width: 551px) {
+  .message-container {
+    width: 100%;
+  }
+}
