@@ -5,7 +5,7 @@ import SiteHeader from './components/SiteHeader';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import './App.css';
+import './styles/App.css';
 
 const App = () => (
   <div className="site-container">
@@ -13,13 +13,17 @@ const App = () => (
       <BrowserRouter>
         <Grid>
           <Grid.Column width={4}>
-            <SiteHeader />
+            <div className="header-container">
+              <SiteHeader />
+            </div>
           </Grid.Column>
-          <Grid.Column mobile={6} tablet={11} computer={11}>
+          <Grid.Column tablet={11} computer={11}>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/portfolio" component={Portfolio} />
-              <Route path="/contact" component={Contact} />
+              <div className="content-container">
+                <Route exact path="/" component={Home} />
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/contact" component={Contact} />
+              </div>
             </Switch>
           </Grid.Column>
         </Grid>
